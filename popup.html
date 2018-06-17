@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/background.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Encode+Sans+Condensed|Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+		<div id ="header">
+			<div id="lottery-tabs">
+				<a href="#" id="see-active-shows" class="tab active-tab">Active Lotteries</a>
+				<a href="#" id="see-upcoming-shows" class="tab">Upcoming Lotteries</a>
+				<a href="#" id="edit-profile" class="tab">Edit Profile</a>
+			</div>
+		</div>
+		<div id="active-shows-container">
+			<h1></h1>
+			<div id="active-shows">
+				<div id="open-shows-wrapper">
+					<button id="open-shows"> Enter Selected </button>
+				</div>
+			</div>
+		</div>
+		<div id="upcoming-shows-container">
+			<h1></h1>
+			<div id="upcoming-shows"></div>
+		</div>
+
+    <div class="container" id="profile-container">
+			<h1></h1>
+			<div id="profile-info">
+				<div>
+      	  <label for="firstName">First Name</label>
+      	  <input id="firstName">
+				</div>
+      	  <label for="lastName">Last Name</label>
+      	  <input id="lastName">
+				<div>
+      	  <label for="email">Email</label>
+      	  <input id="email">
+				</div>
+				<div>
+      	  <div>
+      	  <label>Date of Birth</label>
+      	    <input id="month" min="1" max="12" type="number" placeholder="MM" data-length="2" required>
+      	    <input id="day" min="1" max="31" type="number" placeholder="DD" data-length="2" required>
+      	    <input id="year" min="1850" max="2100" type="number" placeholder="YYYY" data-length="4" required>
+      	  </div>
+      	</div>
+      	<div>
+      	  <label for="ticketNum">Tickets</label>
+      	  <select id="ticketNum">
+      	    <option value="0">0</option>
+      	    <option value="1">1</option>
+      	    <option value="2" selected>2</option>
+      	  </select>
+      	</div>
+      	<div>
+      	  <label for="zip">Zip Code</label>
+      	  <input type="number" id="zip">
+      	</div>
+      	<div>
+      	  <label for="country">Country</label>
+      	  <select id="country">
+      	  	<option value="OTHER">Other</option>
+      	  	<option value="CA">Canada</option>
+      	    <option value="USA" selected="selected">United States</option>
+      	  </select>
+      	</div>
+      	<div id="save-button-wrapper">
+      	  <button type="button" id="save-button">Save</button>
+      	</div>
+      	<br>
+      	<div>
+      	  <div id="error-messages"></div>
+      	</div>
+			</div>
+    </div>
+  	</div>
+		<script type="text/javascript" src="js/popup.js"></script>
+    </body>
+  </html>

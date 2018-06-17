@@ -1,0 +1,31 @@
+ {
+    "name": "BroadwayLottery",
+    "version": "1.0",
+    "description": "Enter Broadway lotteries",
+		"permissions": [
+			"activeTab",
+			"*://lottery.broadwaydirect.com/*",
+			"declarativeContent",
+			"storage",
+			"tabs"
+		],
+		"content_scripts": [
+    {
+      "matches": ["*://lottery.broadwaydirect.com/*"],
+      "js": ["js/lottery.js"],
+      "all_frames": true
+    }
+  	],
+		"background": {
+      "scripts": ["js/jquery.js", "js/background.js"],
+      "persistent": false
+    },
+		"page_action": {
+      "default_popup": "popup.html",
+			"default_icon": {
+      }
+    },
+		"icons": {
+    },
+    "manifest_version": 2
+  }
